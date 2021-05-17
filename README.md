@@ -1,3 +1,34 @@
+## Quick Start:
+
+1. add a non-root user and give it docker and sudo privliage
+
+<code>
+  > add user <myuser>
+  
+  > usermod -aG sudo <myuser>  
+ </code>
+ 
+ 2. login with <myuser> (or switch to <myuser>) and mkdir config folder
+ 
+ <code>
+ > mkdir -p ~/.config
+ </code>
+
+3. run the docker (maybe put the code in $PWD)
+
+<code>
+  docker run -it --name code-server -p 8080:8080 \
+  -v "$HOME/.config:/home/coder/.config" \
+  -v "$PWD:/home/coder/project" \
+  -u "$(id -u):$(id -g)" \
+  -e "DOCKER_USER=$USER" \
+  codercom/code-server:latest
+</code>
+
+ref:https://github.com/cdr/code-server/blob/main/docs/install.md (docker section)
+
+##-----------------------------------------------------------------------
+
 # code-server &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/cdr/code-server/discussions) [!["Join us on Slack"](https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=brightgreen)](https://cdr.co/join-community) [![Twitter Follow](https://img.shields.io/twitter/follow/CoderHQ?label=%40CoderHQ&style=social)](https://twitter.com/coderhq)
 
 [![codecov](https://codecov.io/gh/cdr/code-server/branch/main/graph/badge.svg?token=5iM9farjnC)](https://codecov.io/gh/cdr/code-server)
