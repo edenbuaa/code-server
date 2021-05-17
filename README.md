@@ -3,7 +3,7 @@
 1. add a non-root user and give it docker and sudo privliage
 
 <code>
-  > add user \<myuser\>  
+  > add user \\<myuser\\>  
 
   \> usermod -aG sudo \<myuser\>  
  </code>
