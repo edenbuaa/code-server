@@ -3,15 +3,14 @@
 1. add a non-root user and give it docker and sudo privliage
 
 <code>
-  > add user <myuser>
-  
-  > usermod -aG sudo \<myuser\>  
+  > add user \<myuser\>  
+  \> usermod -aG sudo \<myuser\>  
  </code>
  
- 2. login with <myuser> (or switch to <myuser>) and mkdir config folder
+ 2. login with \<myuser\> (or switch to \<myuser\>) and mkdir config folder
  
  <code>
- > mkdir -p ~/.config
+ \> mkdir -p ~/.config
  </code>
 
 3. run the docker (maybe put the code in $PWD)
