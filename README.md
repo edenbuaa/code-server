@@ -4,7 +4,8 @@
 
 <code>
   > add user \<myuser\>  
-
+  </code>
+  <code>
   \> usermod -aG sudo \<myuser\>  
  </code>
  
