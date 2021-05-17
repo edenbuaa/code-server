@@ -5,7 +5,7 @@
 <code>
   > add user \<myuser\>  
 
-  > usermod -aG sudo \<myuser\>  
+  \> usermod -aG sudo \<myuser\>  
  </code>
  
  2. login with \<myuser\> (or switch to \<myuser\>) and mkdir config folder
